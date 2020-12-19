@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@material-ui/core'
 import './Banner.css'
 
 const Banner: React.FC = () => {
+
+  const [showSearch, setShowSearch] = useState<Boolean>(false)
+
   return (
     <div className='banner'>
       <div className='banner__search'>
-        <Button variant='outlined'>Search Dates</Button>
+        {showSearch && <h1>SHOW DATE PICKER</h1>}
+        <Button
+          onClick={() => {setShowSearch(!showSearch)}}
+          className='banner__searchButton'
+          variant='outlined'
+        >Search Dates
+        </Button>
       </div>
       <div className='banner__info'>
         <h1>Get out stretch your imagination</h1>
