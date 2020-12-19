@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from '@material-ui/core'
+import Search from './Search';
 import './Banner.css'
 
 const Banner: React.FC = () => {
@@ -9,7 +10,7 @@ const Banner: React.FC = () => {
   return (
     <div className='banner'>
       <div className='banner__search'>
-        {showSearch && <h1>SHOW DATE PICKER</h1>}
+        {showSearch && <Search />}
         <Button
           onClick={() => {setShowSearch(!showSearch)}}
           className='banner__searchButton'
