@@ -1,4 +1,8 @@
 import React from 'react'
+import SearchIcon from '@material-ui/icons/Search';
+import LanguageIcon from '@material-ui/icons/Language';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import { Avatar } from '@material-ui/core';
 import './Header.css'
 
 function Header() {
@@ -13,8 +17,14 @@ function Header() {
         <input type='text' />
         <SearchIcon /> 
       </div>
+      <div className='header__right'>
+        <p>Become a host</p>
+        <LanguageIcon />
+        <ExpandMore />
+        <Avatar />
+      </div>
     </div>
-  )
+  ) 
 }
 
 export default Header
